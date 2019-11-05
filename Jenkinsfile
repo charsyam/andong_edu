@@ -1,9 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
-        sh 'cd oss && ./run_tests.sh'
+        sh '''pip install -r ./requirements.txt
+cd oss && ./run_tests.sh'''
       }
     }
 
