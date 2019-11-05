@@ -10,6 +10,15 @@ edu = AndongEdu()
 def hello_world(name):
     return edu.hello(name)
 
+@app.route('/email/<email>')
+def is_valid_email(email):
+    import re
+    regex = '^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$'
+    if(re.search(regex,email)):
+        return "True"
+    else:  
+        return "False"
+
 @app.route('/add/<num1>/<num2>')
 def add(num1, num2):
     raise NotImplementedError("Not Implemented")
