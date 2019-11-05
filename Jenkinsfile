@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh '''pip install -r ./requirements.txt
+        sh '''pyenv local nadia-env
+pyenv rehash
+pip install -r ./requirements.txt
 cd oss && ./run_tests.sh'''
       }
     }
