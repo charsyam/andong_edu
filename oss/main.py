@@ -16,7 +16,8 @@ def ping():
 
 @app.route('/add/<num1>/<num2>')
 def add(num1, num2):
-    raise NotImplementedError("Not Implemented")
+    result=int(num1)+int(num2)
+    return str(result)
 
 @app.route('/minus/<num1>/<num2>')
 def minus(num1, num2):
