@@ -10,6 +10,10 @@ edu = AndongEdu()
 def hello_world(name):
     return edu.hello(name)
 
+@app.route('/ping')
+def ping():
+    return edu.ping()
+
 @app.route('/add/<num1>/<num2>')
 def add(num1, num2):
     raise NotImplementedError("Not Implemented")
