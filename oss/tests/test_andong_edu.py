@@ -19,3 +19,15 @@ class TestAndongEdu(TestCase):
     def test_ping_failure(self):
         test_edu = AndongEdu()
         assert "pong1" != test_edu.ping()
+
+    def test_add_success1(self):
+        test_edu = AndongEdu()
+        assert 4 == test_edu.add(2,2)
+
+    def test_add_success2(self):
+        test_edu = AndongEdu()
+        assert 2 == test_edu.add(0,2)
+
+    def test_add_success3(self):
+        test_edu = AndongEdu()
+        assert 3 == test_edu.add(1,2)
